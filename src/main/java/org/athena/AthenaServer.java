@@ -21,22 +21,8 @@ public class AthenaServer {
         SSTableService ssTableService = new SSTableServiceImpl(BASE_PATH.resolve(".sst"), seqService, new SSTables(BASE_PATH.resolve(".sst")));
         Memtable memtable = new Memtable(storageService, ssTableService);
 
-//        long offset = storageService.write(ByteBufferUtil.wrap("My name is Anurag"));
-//        System.out.println(offset);
-
-//
-//        long offset2 = storageService.write(ByteBufferUtil.wrap("I am " + 27 + " years old"));
-//        System.out.println(offset2);
-
-
-//        System.out.println(storageService.read(36, 75));
-//        memtable.put("name", "Anurag");
-//        memtable.put("age", "27");
-        System.out.println(memtable.get("age"));
         System.out.println(memtable.get("name"));
-//        memtable.put("birthday", "18121991");
 //        memtable.write();
-        System.out.println(memtable.get("birthday"));
 //        memtable.put("passion", "coding");
         System.out.println(memtable.get("passion"));
 //        memtable.write();
